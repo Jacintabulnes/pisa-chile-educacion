@@ -1,48 +1,30 @@
-# Desigualdades en comprensión lectora: el caso de Chile en PISA
+# Desigualdades en comprensión lectora: Chile en PISA
 
-## Tema de investigación
+## Pregunta de investigación
 
-Este proyecto busca analizar cómo ha evolucionado el desempeño en comprensión lectora de los estudiantes chilenos evaluados por PISA, poniendo especial atención en las diferencias entre grupos. Más allá de los promedios nacionales, nos interesa identificar qué estudiantes presentan ventajas o desventajas y cómo estas se relacionan con los cambios observados en los resultados.
-
-## Pregunta principal
-
-¿Cómo ha cambiado el desempeño lector de los estudiantes chilenos y qué desigualdades persisten según sus características?
+¿Cómo han evolucionado las diferencias de desempeño lector entre estudiantes chilenos según género y nivel socioeconómico?
 
 ## Hipótesis
 
-Los cambios en los resultados de comprensión lectora no afectan de la misma manera a todos los estudiantes. Planteamos que las diferencias de género y nivel socioeconómico permiten identificar trayectorias desiguales que quedan ocultas cuando se observa únicamente el promedio nacional.
+Las desigualdades lectoras no evolucionan de forma uniforme. Esperamos encontrar que la ventaja histórica de las mujeres se estrechó en la última medición principalmente por una caída de sus puntajes, mientras que los estudiantes de mayor nivel socioeconómico mantienen una ventaja sobre los de menor nivel. La segunda parte se contrastará con datos comparables de PISA.
 
-## Subhistorias
+## Subhistorias y avances
 
-**1. Género y comprensión lectora**
+**1. Género (2000–2022).** La serie chilena muestra una ventaja femenina en todas las mediciones disponibles. Entre 2018 y 2022, la brecha bajó de 20 a 6 puntos: las mujeres pasaron de 462 a 451 y los hombres de 442 a 445. Según el informe nacional, la diferencia entre sexos en 2022 no fue estadísticamente significativa. Esta visualización está terminada.
 
-Analizamos la evolución de los puntajes de mujeres y hombres entre 2000 y 2022. Los datos muestran que la ventaja histórica de las mujeres se redujo especialmente en la última medición. Entre 2018 y 2022, la brecha pasó de 20 a 6 puntos, principalmente por una caída del rendimiento femenino.
+**2. Nivel socioeconómico.** Investigaremos la diferencia de puntajes de lectura entre grupos de distinto nivel socioeconómico. Antes de definir el período y el gráfico, verificaremos qué indicador y años son comparables. Esta visualización está pendiente.
 
-**2. Nivel socioeconómico y comprensión lectora**
+## Fuentes y método
 
-Investigaremos las diferencias de rendimiento entre estudiantes de distintos niveles socioeconómicos. Buscaremos determinar si existe una ventaja sostenida de los grupos más favorecidos y qué tan amplia es. Esta hipótesis queda pendiente de contrastar con las variables disponibles en PISA.
+Para la primera subhistoria usamos el informe *PISA 2022* de la Agencia de Calidad de la Educación (p. 26), que publica los promedios de lectura por sexo para 2000, 2006, 2009, 2012, 2015, 2018 y 2022. Transcribimos los valores del gráfico oficial, estructuramos la base en CSV con pandas y elaboramos la visualización con Altair. No trabajamos con microdatos ni estimamos significancia estadística propia.
 
-## Datos y metodología
-
-Utilizamos resultados de PISA publicados por la OCDE y la Agencia de Calidad de la Educación de Chile. Para la primera visualización, trabajamos con los puntajes de lectura por sexo correspondientes a las evaluaciones de 2000 a 2022, transcritos del informe nacional PISA 2022.
-
-El procesamiento se realiza con Python y pandas, mientras que las visualizaciones se construyen con Altair. Cada análisis individual incluye su base de datos, código reproducible, gráfico y crónica.
+Para la segunda subhistoria se seleccionarán indicadores socioeconómicos publicados por PISA y se documentarán sus limitaciones de comparabilidad.
 
 ## Enfoque narrativo
 
-Queremos mostrar que una reducción de las brechas educativas no siempre significa una mejora en los aprendizajes. Para comprender los resultados de PISA es necesario observar tanto las diferencias entre grupos como la evolución del desempeño de cada uno.
+Una brecha menor no implica necesariamente mejores aprendizajes: importa identificar si los grupos convergen porque uno mejora o porque otro retrocede. El proyecto buscará mostrar qué ocultan los promedios nacionales.
 
-## Estado del proyecto
+## Entregas individuales
 
-La visualización sobre género está desarrollada. La segunda subhistoria se encuentra en etapa de definición y verificación de datos.
-## Visualizaciones individuales
-
-### Género y comprensión lectora — Primera integrante
-
-Esta visualización analiza la evolución de los puntajes de comprensión lectora de mujeres y hombres chilenos entre 2000 y 2022. El principal hallazgo es que la brecha de género se redujo de 20 a 6 puntos entre 2018 y 2022, principalmente debido al descenso del puntaje femenino.
-
-**[Ver visualización, crónica, datos y código en GitHub](https://github.com/Jacintabulnes/pisa-chile-brecha-lectura-genero/tree/main)**
-
-### Nivel socioeconómico y comprensión lectora — Segunda integrante
-
-Esta subhistoria investigará las diferencias en comprensión lectora entre estudiantes de distintos niveles socioeconómicos. La visualización y sus resultados se incorporarán una vez que se compruebe la disponibilidad de los datos.
+- **Género y lectura:** [visualización, crónica, datos y código](https://github.com/Jacintabulnes/pisa-chile-brecha-lectura-genero).
+- **Nivel socioeconómico y lectura:** enlace pendiente de incorporación.
