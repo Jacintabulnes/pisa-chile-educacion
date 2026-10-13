@@ -35,3 +35,14 @@ Queremos mostrar que una reducción de las brechas educativas no siempre signifi
 ## Estado del proyecto
 
 La visualización sobre género está desarrollada. La segunda subhistoria se encuentra en etapa de definición y verificación de datos.
+## Visualizaciones individuales
+
+### Género y comprensión lectora — Primera integrante
+
+Esta visualización analiza la evolución de los puntajes de comprensión lectora de mujeres y hombres chilenos entre 2000 y 2022. El principal hallazgo es que la brecha de género se redujo de 20 a 6 puntos entre 2018 y 2022, principalmente debido al descenso del puntaje femenino.
+
+**[Ver visualización, crónica, datos y código en GitHub](https://github.com/Jacintabulnes/pisa-chile-brecha-lectura-genero/tree/main)**
+
+### Nivel socioeconómico y comprensión lectora — Segunda integrante
+
+Esta subhistoria investigará las diferencias en comprensión lectora entre estudiantes de distintos niveles socioeconómicos. La visualización y sus resultados se incorporarán una vez que se compruebe la disponibilidad de los datos.
