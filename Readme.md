@@ -27,7 +27,7 @@ En 2006, el quintil socioeconómico y cultural más favorecido obtuvo 517 puntos
 
 **Pregunta:** ¿La reducción de esta brecha refleja mejoras del quintil menos favorecido, retrocesos del más favorecido o ambos movimientos?
 
-*Visualización individual en desarrollo.*
+https://github.com/sofiamartinez1974/pisa-chile-desigualdad-socioeconomica
 
 ## Datos y metodología
 
