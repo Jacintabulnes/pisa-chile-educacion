@@ -25,10 +25,10 @@ durante la pandemia y los desafíos relacionados con
 las pantallas y la atención.
 
 ## Crónica publicada
-PEGAR AQUÍ EL ENLACE DE GITHUB PAGES
+https://sofiamartinez1974.github.io/pisa-chile-cronica-socioeconomica/
 
 ## Repositorio individual
-PEGAR AQUÍ EL ENLACE DEL REPOSITORIO PERSONAL
+https://github.com/sofiamartinez1974/pisa-chile-cronica-socioeconomica
 
 ## Visualización
 Gráfico de líneas sobre la evolución de los puntajes
