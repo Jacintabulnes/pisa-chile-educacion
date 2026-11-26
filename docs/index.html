@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lectura en Chile | Cuando las brechas se achican, pero no todos avanzan</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="encabezado">
+    <nav class="navegacion">
+        <a class="marca" href="#inicio">Lectura en Chile</a>
+
+        <div class="menu">
+            <a href="#genero">Género</a>
+            <a href="#socioeconomico">Nivel socioeconómico</a>
+            <a href="#metodologia">Metodología</a>
+        </div>
+    </nav>
+</header>
+
+<!-- PORTADA -->
+
+<section class="portada" id="inicio">
+
+    <div class="portada-contenido">
+
+        <img class="logo" src="imagenes/logo.png" alt="Logo Lectura en Chile">
+
+        <span class="etiqueta">Educación · Investigación de datos</span>
+
+        <h1>Lectura en Chile</h1>
+
+        <h2>Cuando las brechas se achican, pero no todos avanzan</h2>
+
+        <p class="bajada">
+            Chile busca mejorar las competencias lectoras de sus estudiantes.
+            Sin embargo, mientras algunas diferencias históricas se reducen,
+            el rendimiento de quienes antes lideraban retrocede.
+            ¿Qué revelan estos cambios sobre el problema que las políticas
+            públicas buscan resolver?
+        </p>
+
+        <p class="autoras">
+            Por Jacinta Bulnes y Sofía Martínez
+        </p>
+
+        <div class="botones">
+            <a class="boton principal" href="#historia">Comenzar a leer ↓</a>
+            <a class="boton secundario" href="#metodologia">Ver metodología</a>
+        </div>
+
+    </div>
+
+    <div class="portada-imagen">
+        <img src="imagenes/portada.jpg" alt="Estudiantes en un espacio de lectura">
+    </div>
+
+</section>
+
+<main id="historia">
+
+    <!-- CONTEXTO -->
+
+    <section class="capitulo" id="contexto">
+
+        <span class="etiqueta">El contexto</span>
+
+        <h2>Chile frente al desafío de la lectura</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Mejorar la comprensión lectora desde los primeros años
+                de escolaridad es uno de los desafíos de la educación
+                chilena. El
+                <a href="https://www.mineduc.cl/" target="_blank" rel="noopener">
+                    Ministerio de Educación
+                </a>
+                ha impulsado iniciativas orientadas a fortalecer el
+                aprendizaje lector y detectar tempranamente las dificultades
+                de los estudiantes.
+            </p>
+
+            <p>
+                Pero ¿qué sabemos realmente sobre el problema que Chile
+                busca resolver?
+            </p>
+
+            <p>
+                Para ampliar este diagnóstico, analizamos los resultados
+                de PISA entre 2012 y 2022, observando cómo ha evolucionado
+                la comprensión lectora de los estudiantes chilenos según
+                su género y contexto socioeconómico.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONFLICTO -->
+
+    <section class="capitulo" id="conflicto">
+
+        <h2>Una aparente buena noticia</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                
+<p>
+    Entre 2018 y 2022, la distancia en comprensión lectora
+    entre los estudiantes chilenos de mayor y menor nivel
+    socioeconómico se redujo. En los hombres, pasó de 99
+    a 82 puntos, mientras que en las mujeres disminuyó
+    de 98 a 84 puntos.
+</p>
+
+            </p>
+
+            <p>
+                A primera vista, estas cifras podrían interpretarse
+                como un avance hacia una educación más equitativa.
+            </p>
+
+        </div>
+
+        <figure class="contenedor-grafico">
+            <div id="grafico-brechas"></div>
+            <figcaption>
+                Fuente: elaboración propia a partir de resultados
+                PISA 2012–2022.
+            </figcaption>
+        </figure>
+
+        <aside class="recuadro">
+
+            <h3>¿De dónde vienen estos datos?</h3>
+
+            <p>
+                Desde el año 2000, Chile participa en el
+                <a href="https://www.oecd.org/en/about/programmes/pisa.html"
+                   target="_blank" rel="noopener">
+                    Programa para la Evaluación Internacional de Estudiantes (PISA)
+                </a>,
+                una prueba desarrollada por la Organización para la
+                Cooperación y el Desarrollo Económicos (OCDE).
+            </p>
+
+            <p>
+                La evaluación mide las competencias de jóvenes de
+                15 años en lectura, matemáticas y ciencias.
+                En comprensión lectora, no mide cuánto han leído
+                los estudiantes, sino su capacidad de entender,
+                interpretar y utilizar información escrita.
+            </p>
+
+        </aside>
+
+    </section>
+
+    <!-- EXPLORACIÓN INTERACTIVA -->
+
+    <section class="capitulo destacado" id="zoom">
+
+        <span class="etiqueta">Explora los datos</span>
+
+        <h2>Lo que esconden las cifras</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Para entender por qué se han reducido estas diferencias,
+                es necesario observar qué ocurrió con el rendimiento
+                de cada grupo.
+            </p>
+
+        </div>
+
+        <div class="controles">
+
+            <button class="selector activo"
+                    data-vista="genero"
+                    aria-pressed="true">
+                Explorar por género
+            </button>
+
+            <button class="selector"
+                    data-vista="socioeconomico"
+                    aria-pressed="false">
+                Explorar por nivel socioeconómico
+            </button>
+
+        </div>
+
+        <figure class="contenedor-grafico">
+            <div id="grafico-zoom"></div>
+            <figcaption>
+                Utiliza los botones y selectores para comparar
+                las trayectorias de los distintos grupos.
+                Fuente: PISA 2012–2022.
+            </figcaption>
+        </figure>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Los datos muestran que parte de este acercamiento
+                responde al retroceso de quienes históricamente
+                obtenían mejores resultados.
+            </p>
+
+            <p>
+                Sin embargo, el deterioro no se distribuye de manera
+                uniforme. Para entender cómo está afectando a los
+                estudiantes chilenos, analizamos dos variables que
+                históricamente han marcado el rendimiento lector.
+            </p>
+
+        </div>
+
+        <div class="rutas">
+
+            <a class="ruta" href="#genero">
+                <span>01</span>
+                <h3>Brecha de género</h3>
+                <p>Una ventaja que no es universal.</p>
+            </a>
+
+            <a class="ruta" href="#socioeconomico">
+                <span>02</span>
+                <h3>Brecha socioeconómica</h3>
+                <p>Cuando las ventajas no son suficientes.</p>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- SUBHISTORIA 1 -->
+
+    <section class="capitulo" id="genero">
+
+        <span class="etiqueta">01 · Género</span>
+
+        <h2>Una ventaja que no es universal</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Desde que Chile comenzó a participar en PISA,
+                las mujeres han obtenido mejores resultados nacionales
+                en comprensión lectora que los hombres.
+                Sin embargo, este patrón cambia cuando incorporamos
+                una segunda variable: el contexto socioeconómico.
+            </p>
+
+            <p>
+                Para estudiarlo, PISA cuenta con un índice económico,
+                social y cultural (ESCS), que considera aspectos como
+                la educación y ocupación de los padres y los recursos
+                disponibles en el hogar.
+            </p>
+
+            <p>
+                A partir de este indicador, agrupamos a los estudiantes
+                en cinco segmentos, llamados quintiles.
+            </p>
+
+        </div>
+
+        <div class="quintiles">
+
+            <div class="quintil">
+                <strong>Q1</strong>
+                <span>20%</span>
+                <small>Menos favorecido</small>
+            </div>
+
+            <div class="quintil">
+                <strong>Q2</strong>
+                <span>20%</span>
+            </div>
+
+            <div class="quintil">
+                <strong>Q3</strong>
+                <span>20%</span>
+                <small>Intermedio</small>
+            </div>
+
+            <div class="quintil">
+                <strong>Q4</strong>
+                <span>20%</span>
+            </div>
+
+            <div class="quintil">
+                <strong>Q5</strong>
+                <span>20%</span>
+                <small>Más favorecido</small>
+            </div>
+
+        </div>
+
+        <p class="nota">
+            Cada quintil representa aproximadamente un 20% de la
+            población estudiantil con información socioeconómica disponible.
+        </p>
+
+        <h3>El grupo que rompió la tendencia</h3>
+
+        <div class="texto-periodistico">
+
+            <p>
+                En 2018, las mujeres del tercer quintil, correspondiente
+                al segmento socioeconómico intermedio, superaban a los
+                hombres de su mismo grupo por más de 22 puntos.
+                Cuatro años después, esa ventaja había desaparecido
+                en los puntajes estimados.
+            </p>
+
+        </div>
+
+        <figure class="contenedor-grafico">
+            <div id="grafico-quintil-tres"></div>
+            <figcaption>
+                Fuente: elaboración propia a partir de PISA 2012–2022.
+            </figcaption>
+        </figure>
+
+        <div class="cifras-destacadas">
+
+            <div class="cifra">
+                <strong>+10</strong>
+                <span>Puntos en hombres del Q3</span>
+            </div>
+
+            <div class="cifra">
+                <strong>−16</strong>
+                <span>Puntos en mujeres del Q3</span>
+            </div>
+
+        </div>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Mientras los hombres aumentaron su puntaje en
+                aproximadamente 10 puntos, las mujeres retrocedieron
+                cerca de 16.
+            </p>
+
+            <p>
+                Aunque este análisis no permite afirmar que los hombres
+                hayan alcanzado un rendimiento significativamente superior,
+                el caso muestra que la ventaja femenina observada a nivel
+                nacional no se reproduce de la misma manera en todos
+                los sectores.
+            </p>
+
+        </div>
+
+    </section>
+
+    <figure class="pausa-visual">
+        <img src="imagenes/estudiantes.jpg"
+             alt="Estudiantes realizando actividades escolares"
+             loading="lazy">
+    </figure>
+
+    <!-- HÁBITOS LECTORES -->
+
+    <section class="capitulo" id="habitos">
+
+        <h2>Una generación, distintas formas de leer</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                La preocupación por la lectura también se extiende
+                más allá de las escuelas. El
+                <a href="https://plandelectura.cultura.gob.cl/"
+                   target="_blank" rel="noopener">
+                    Plan Nacional de la Lectura, Escritura y Oralidad
+                </a>
+                busca fomentar la lectura como práctica social
+                y cultural durante toda la vida.
+            </p>
+
+            <p>
+                A partir de los microdatos de la Encuesta Nacional
+                de Participación Cultural y Comportamiento Lector
+                de 2024 y de la Encuesta de Comportamiento Lector
+                de 2014, analizamos cómo ha cambiado la relación
+                de los jóvenes lectores con los libros durante
+                una década.
+            </p>
+
+        </div>
+
+        <figure class="contenedor-grafico">
+            <div id="grafico-habitos"></div>
+            <figcaption>
+                Fuente: elaboración propia a partir de ECL 2014
+                y ENPCCL 2024. Jóvenes de 15 a 19 años que declararon
+                leer libros por ocio y reportaron una cantidad válida.
+            </figcaption>
+        </figure>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Entre las jóvenes lectoras, la proporción que lee
+                once libros o más al año casi se triplicó.
+                Al mismo tiempo, aumentó el grupo que lee apenas
+                uno o dos.
+            </p>
+
+            <p>
+                Si observáramos únicamente el promedio de libros
+                leídos, este contraste podría pasar inadvertido.
+            </p>
+
+            <p>
+                Aunque los datos no permiten establecer una relación
+                directa con los resultados de PISA, muestran que las
+                mujeres jóvenes tampoco constituyen un grupo homogéneo
+                en sus prácticas lectoras.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SUBHISTORIA 2 -->
+
+    <section class="capitulo" id="socioeconomico">
+
+        <span class="etiqueta">02 · Nivel socioeconómico</span>
+
+        <h2>Cuando las ventajas no son suficientes</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Los estudiantes de hogares más favorecidos suelen
+                obtener mejores resultados en comprensión lectora.
+                Sin embargo, contar con mayores ventajas socioeconómicas
+                no ha impedido que sus puntajes retrocedan.
+            </p>
+
+            <p>
+                Al comparar las últimas mediciones de PISA,
+                encontramos que los distintos sectores han seguido
+                trayectorias diferentes.
+            </p>
+
+        </div>
+
+        <figure class="contenedor-grafico">
+            <div id="grafico-variaciones"></div>
+            <figcaption>
+                Fuente: elaboración propia a partir de PISA.
+                Variaciones observadas entre 2015 y 2018,
+                y entre 2018 y 2022.
+            </figcaption>
+        </figure>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Desde 2015, los resultados del quintil más bajo
+                se han mantenido relativamente estables.
+                En el quintil más alto, en cambio, el retroceso
+                se intensificó después de 2018.
+            </p>
+
+            <p>
+                El deterioro del rendimiento lector no se concentra
+                necesariamente en los sectores que históricamente
+                han presentado mayores dificultades.
+            </p>
+
+            <p>
+                Esto no significa que las condiciones socioeconómicas
+                hayan perdido importancia. Fuera de la sala de clases,
+                encontramos diferencias que siguen siendo pronunciadas.
+            </p>
+
+        </div>
+
+    </section>
+
+    <figure class="pausa-visual">
+        <img src="imagenes/biblioteca.jpg"
+             alt="Jóvenes leyendo en una biblioteca"
+             loading="lazy">
+    </figure>
+
+    <!-- DIFICULTADES LECTORAS -->
+
+    <section class="capitulo" id="dificultades">
+
+        <h2>Leer no supone el mismo esfuerzo para todos</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Perder la concentración, tener que volver sobre
+                un párrafo o no lograr comprender lo que dice
+                un texto son dificultades que pueden aparecer
+                al momento de leer.
+            </p>
+
+            <p>
+                La Encuesta Nacional de Participación Cultural
+                y Comportamiento Lector de 2024 permite conocer
+                algunas de estas dificultades a partir de las
+                respuestas de los propios encuestados.
+            </p>
+
+        </div>
+
+        <figure class="contenedor-grafico">
+            <div id="grafico-dificultades"></div>
+            <figcaption>
+                Fuente: elaboración propia a partir de los microdatos
+                de ENPCCL 2024.
+            </figcaption>
+        </figure>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Entre las personas de nivel socioeconómico bajo,
+                la proporción que declara dificultades para
+                comprender lo que lee es más del doble que entre
+                aquellas de nivel alto.
+            </p>
+
+            <p>
+                Algo similar ocurre con la concentración y
+                el ritmo de lectura.
+            </p>
+
+            <p>
+                Estas respuestas reflejan percepciones personales
+                y no resultados de una prueba de competencias.
+                Aun así, permiten observar una dimensión del problema
+                que los puntajes escolares no muestran: cómo las
+                personas experimentan la lectura en su vida cotidiana.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- NIVEL 2 -->
+
+    <section class="capitulo destacado" id="nivel-dos">
+
+        <span class="etiqueta">La dimensión del problema</span>
+
+        <h2>¿Qué significa obtener un bajo puntaje en lectura?</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Hablar de una caída de 10 o 15 puntos puede
+                resultar abstracto. Para comprender qué representan
+                estos resultados, PISA establece distintos niveles
+                de competencia lectora, según la complejidad de
+                las tareas que los estudiantes pueden realizar.
+            </p>
+
+        </div>
+
+        <div class="niveles-lectura">
+
+            <div class="nivel">
+                <strong>Bajo nivel 2</strong>
+                <p>Dificultades para realizar tareas básicas de comprensión.</p>
+            </div>
+
+            <div class="nivel umbral">
+                <strong>Nivel 2</strong>
+                <p>Umbral básico de competencia lectora.</p>
+            </div>
+
+            <div class="nivel">
+                <strong>Niveles 3 a 6</strong>
+                <p>Tareas de comprensión de complejidad creciente.</p>
+            </div>
+
+        </div>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Alcanzar el nivel 2 implica, entre otras habilidades,
+                poder identificar la idea principal de un texto
+                y localizar información siguiendo determinados criterios.
+            </p>
+
+            <p>
+                Estar por debajo de este nivel no significa
+                necesariamente no saber leer, sino presentar
+                dificultades para realizar algunas tareas básicas
+                de comprensión.
+            </p>
+
+        </div>
+
+        <div class="dato-grande">
+            <strong>1 de cada 2</strong>
+            <p>
+                estudiantes hombres del quintil socioeconómico
+                más bajo se encontraba por debajo del nivel 2
+                en 2022, aproximadamente.
+            </p>
+        </div>
+
+        <div id="pictogramas-nivel-dos" class="pictogramas"></div>
+
+        <p class="nota">
+            Cada figura representa aproximadamente un punto porcentual.
+            Fuente: PISA 2022.
+        </p>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Pero el problema no es exclusivo de los sectores
+                más desfavorecidos.
+            </p>
+
+        </div>
+
+        <figure class="contenedor-grafico">
+            <div id="grafico-nivel-dos"></div>
+            <figcaption>
+                Fuente: elaboración propia a partir de PISA 2018 y 2022.
+            </figcaption>
+        </figure>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Entre los hombres del quintil más alto, la proporción
+                de estudiantes bajo el nivel 2 pasó de un 15% a un 20%.
+                Entre las mujeres del mismo grupo también se observa
+                un aumento.
+            </p>
+
+            <p>
+                El deterioro de estos sectores no solo se refleja
+                en sus puntajes promedio. También se observa una
+                mayor proporción de estudiantes que no alcanza
+                las competencias lectoras básicas.
+            </p>
+
+        </div>
+
+    </section>
+
+    <figure class="pausa-visual">
+        <img src="imagenes/lectura.jpg"
+             alt="Estudiantes dedicando tiempo a la lectura"
+             loading="lazy">
+    </figure>
+
+    <!-- CONCLUSIÓN -->
+
+    <section class="capitulo conclusion" id="hallazgo">
+
+        <span class="etiqueta">El hallazgo</span>
+
+        <h2>Una crisis que va más allá de los puntajes</h2>
+
+        <div class="texto-periodistico">
+
+            <p>
+                El género y el nivel socioeconómico, dos categorías
+                que históricamente han permitido describir las
+                desigualdades lectoras en Chile, resultan insuficientes
+                cuando se analizan de manera aislada.
+            </p>
+
+            <p>
+                Las distintas trayectorias de rendimiento,
+                la diversidad de los hábitos lectores y las dificultades
+                asociadas al contexto social dan cuenta de un problema
+                que trasciende los aprendizajes escolares.
+            </p>
+
+        </div>
+
+        <div class="dimensiones">
+
+            <div>
+                <span>01</span>
+                <h3>Rendimiento</h3>
+                <p>
+                    Las ventajas históricas no garantizan
+                    la estabilidad de los aprendizajes.
+                </p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>Hábitos</h3>
+                <p>
+                    Los promedios pueden ocultar experiencias
+                    lectoras muy diferentes dentro de un mismo grupo.
+                </p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>Dificultades</h3>
+                <p>
+                    Las condiciones sociales siguen marcando
+                    la experiencia cotidiana de leer.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="texto-periodistico">
+
+            <p>
+                Frente a los esfuerzos de las políticas públicas
+                por fortalecer el aprendizaje lector y fomentar
+                la lectura, nuestros resultados muestran la
+                importancia de ampliar el diagnóstico.
+            </p>
+
+            <p>
+                La crisis lectora en Chile no puede entenderse
+                únicamente a partir de los puntajes escolares.
+                También involucra cómo las personas se relacionan
+                con la lectura, en qué condiciones lo hacen
+                y qué dificultades enfrentan.
+            </p>
+
+            <p class="frase-final">
+                Dimensiones educativas, sociales y culturales
+                que las políticas públicas necesitan considerar
+                en conjunto.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- METODOLOGÍA -->
+
+    <section class="capitulo metodologia" id="metodologia">
+
+        <span class="etiqueta">Transparencia</span>
+
+        <h2>Metodología y fuentes</h2>
+
+        <p>
+            Esta investigación analiza tres dimensiones de la
+            desigualdad lectora: rendimiento escolar, hábitos
+            de lectura y dificultades lectoras declaradas.
+        </p>
+
+        <details open>
+
+            <summary>01. Rendimiento escolar: PISA</summary>
+
+            <p>
+                Utilizamos una base previamente procesada de resultados
+                chilenos de PISA correspondientes a 2012, 2015,
+                2018 y 2022.
+            </p>
+
+            <p>
+                A partir de sus estimaciones por sexo y quintil
+                socioeconómico, calculamos diferencias de puntaje,
+                variaciones entre mediciones y cambios en la
+                proporción de estudiantes bajo el nivel 2.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://www.oecd.org/en/about/programmes/pisa.html"
+                       target="_blank" rel="noopener">
+                        Programa PISA — OCDE
+                    </a>
+                </li>
+                <li>
+                    <a href="https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_STU_QQQ.zip">
+                        Base internacional PISA 2015
+                    </a>
+                </li>
+                <li>
+                    <a href="https://webfs.oecd.org/pisa2018/SPSS_STU_QQQ.zip">
+                        Base internacional PISA 2018
+                    </a>
+                </li>
+                <li>
+                    <a href="https://webfs.oecd.org/pisa2022/STU_QQQ_SPSS.zip">
+                        Base internacional PISA 2022
+                    </a>
+                </li>
+            </ul>
+
+        </details>
+
+        <details>
+
+            <summary>02. Hábitos lectores: 2014 y 2024</summary>
+
+            <p>
+                Analizamos registros individuales de la Encuesta
+                de Comportamiento Lector de 2014 y de la Encuesta
+                Nacional de Participación Cultural y Comportamiento
+                Lector de 2024.
+            </p>
+
+            <p>
+                Utilizamos factores de expansión para calcular
+                distribuciones de libros leídos por ocio durante
+                los últimos doce meses, con especial atención
+                a los jóvenes de 15 a 19 años.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://plandelectura.cultura.gob.cl/wp-content/files_mf/1557520923BaseMaestraECL2014.sav">
+                        Base de datos ECL 2014
+                    </a>
+                </li>
+                <li>
+                    <a href="https://plandelectura.cultura.gob.cl/wp-content/uploads/2015/04/ManualAnalisisdeDatos.pdf"
+                       target="_blank" rel="noopener">
+                        Manual de análisis de datos ECL 2014
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.cultura.gob.cl/wp-content/uploads/2025/08/enpccl_puf.dta">
+                        Base de datos ENPCCL 2024
+                    </a>
+                </li>
+            </ul>
+
+        </details>
+
+        <details>
+
+            <summary>03. Dificultades lectoras</summary>
+
+            <p>
+                A partir de ENPCCL 2024, calculamos porcentajes
+                ponderados de dificultades declaradas de comprensión,
+                concentración, ritmo de lectura y paciencia,
+                según nivel socioeconómico.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://observatorio.cultura.gob.cl/"
+                       target="_blank" rel="noopener">
+                        Observatorio Cultural
+                    </a>
+                </li>
+                <li>
+                    <a href="https://observatorio.cultura.gob.cl/wp-content/uploads/2025/10/Diccionario-de-Variables-ENPCCL-2024.pdf"
+                       target="_blank" rel="noopener">
+                        Diccionario de variables ENPCCL 2024
+                    </a>
+                </li>
+                <li>
+                    <a href="https://observatorio.cultura.gob.cl/wp-content/uploads/2025/10/Manual-de-Usuario-de-la-BBDD-ENPCCL-2024.pdf"
+                       target="_blank" rel="noopener">
+                        Manual de usuario ENPCCL 2024
+                    </a>
+                </li>
+            </ul>
+
+        </details>
+
+        <details>
+
+            <summary>04. Políticas públicas</summary>
+
+            <p>
+                Las iniciativas de fortalecimiento del aprendizaje
+                lector y de fomento de la lectura permiten contextualizar
+                los resultados de esta investigación.
+            </p>
+
+            <p>
+                El análisis no constituye una evaluación de la
+                efectividad de estas políticas.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://www.mineduc.cl/"
+                       target="_blank" rel="noopener">
+                        Ministerio de Educación
+                    </a>
+                </li>
+                <li>
+                    <a href="https://plandelectura.cultura.gob.cl/"
+                       target="_blank" rel="noopener">
+                        Plan Nacional de la Lectura, Escritura y Oralidad
+                    </a>
+                </li>
+            </ul>
+
+        </details>
+
+        <details>
+
+            <summary>05. Procesamiento y limitaciones</summary>
+
+            <p>
+                Los análisis se realizaron mediante Python
+                en Google Colab. Los resultados fueron exportados
+                en formato CSV y utilizados para construir
+                visualizaciones interactivas con Vega-Lite.
+            </p>
+
+            <p>
+                Las comparaciones de PISA son descriptivas.
+                No incorporan todos los componentes de incertidumbre
+                necesarios para establecer significancia estadística
+                entre ciclos, incluido el error de enlace.
+            </p>
+
+            <p>
+                La comparación de hábitos lectores considera
+                población urbana de 15 a 64 años que declaró leer
+                libros por ocio y reportó una cantidad positiva
+                y válida. El análisis juvenil se restringe
+                a las edades de 15 a 19 años.
+            </p>
+
+            <p>
+                Las encuestas presentan diferencias metodológicas
+                y no siguen a las mismas personas a lo largo del tiempo.
+                PISA y las encuestas culturales tampoco evalúan
+                exactamente a la misma población.
+            </p>
+
+            <p>
+                Por lo tanto, los resultados no permiten establecer
+                relaciones causales entre los hábitos lectores,
+                el contexto socioeconómico y el rendimiento escolar.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>06. Datos y reproducibilidad</summary>
+
+            <p>
+                Las bases utilizadas, los códigos de análisis
+                y la documentación del proyecto se encuentran
+                disponibles en nuestro repositorio.
+            </p>
+
+            <a class="boton secundario"
+               href="https://github.com/Jacintabulnes/pisa-chile-educacion"
+               target="_blank" rel="noopener">
+                Ver repositorio en GitHub
+            </a>
+
+        </details>
+
+    </section>
+
+</main>
+
+<footer class="pie-pagina">
+
+    <img class="logo" src="imagenes/logo.png" alt="Lectura en Chile">
+
+    <h3>Lectura en Chile</h3>
+
+    <p>Jacinta Bulnes y Sofía Martínez</p>
+
+    <p>Narración Gráfica de No Ficción · COM-208</p>
+
+    <p>Facultad de Comunicaciones</p>
+
+    <p>Pontificia Universidad Católica de Chile · 2026</p>
+
+    <a href="#inicio">Volver al inicio ↑</a>
+
+</footer>
+
+</body>
+</html>
