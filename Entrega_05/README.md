@@ -2,7 +2,7 @@
 # Entrega 05 — Webstory Beta
 
 # Lectura en Chile: cuando las brechas se achican, pero no todos avanzan
-
+**Webstory publicada:** [Lectura en Chile: cuando las brechas se achican, pero no todos avanzan](https://jacintabulnes.github.io/pisa-chile-educacion/)
 **Integrantes:** Jacinta Bulnes y Sofía Martínez.
 
 **Curso:** Narración Gráfica de No Ficción (COM-208).
